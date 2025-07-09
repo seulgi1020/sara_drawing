@@ -19,6 +19,8 @@ body {
 
 
 .b_story_wrap {
+  width: 100%;
+  height: 100vh;
   position: relative;
 }
 
@@ -455,68 +457,6 @@ font-weight: normal;
 
 
 
-section.mid_short_show {
-  width: 100%;
-  height: 100vh;
-  background-color: #381738;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: absolute;
-
-  z-index: 10;
-   pointer-events: none; 
-
-}
-
-
-
-section.mid_short_show .con {
-  width: 914px;
-  height: 714px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-section.mid_short_show .con .img {
-  width: 920px;
-  height: 617px;
-  background-image: url(../img/section_show/portfolio_ready.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-self: center;
-  z-index: 1;
-transform: translateY(-40px);
-
-}
-
-
-
-
-
-.bangbb {
-  position: relative;
-  width: 456px;
-  height: 645px;
-  left: 20px;
-  top: 20px;
-}
-
-section.mid_short_show .con .bangbb .ligt {
-  width: 234px;
-  height: 234px;
-  background-image: url(../img/section_show/light_show4-01.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: -34px;
-  right: 0px;
-  z-index: 3;
-}
 
 
 section.pofo_list {
@@ -533,7 +473,7 @@ section.pofo_list {
  
     cursor: url('/img/section_portfoliolist/cursor_point.png') 64 86, auto;
   z-index: 1;
-  margin-top: 100vh;
+
 }
 
 

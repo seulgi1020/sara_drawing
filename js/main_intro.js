@@ -71,7 +71,7 @@ $(function () {
                   console.log("🎭 인트로 사라짐 시작");
                   $('.intro_show').fadeOut(2000, function () {
                     console.log("✅ 애니메이션 완료, 페이지 이동!");
-                    window.location.href = "index.html"; // 원하는 파일명으로 변경
+                    window.location.href = "indexmain.html"; // 원하는 파일명으로 변경
                   });
                 }, 600);
               }
