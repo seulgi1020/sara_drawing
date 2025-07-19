@@ -2,8 +2,7 @@
 body{
     background-color: #502650;
 
-    width: 100%;
-   height: 100%;
+
 }
 
 * {
@@ -12,24 +11,27 @@ body{
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
+html, body {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 section.mid_short_show {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
+  min-height: 100vh;
   background-color: #381738;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  position: absolute;
-
-  z-index: 10;
-   pointer-events: none; 
-
+  z-index: 30;
+  pointer-events: none;
+    overflow: hidden;
 }
 
 
@@ -81,13 +83,15 @@ section.mid_short_show .con .bangbb .ligt {
 }
 
 header{
-z-index: 1;
+top:0;
+
+ position: absolute;
     width: 100%;
-    height: 755px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: pink;
+
 }
 
 
@@ -96,8 +100,9 @@ header .title{width: 1800px;
   display: flex;
   align-items: center;
     justify-content: center;
- background-color: purple;
-height: 500px;}
+
+height: 500px;
+margin-top: 80px;}
 
 header .title h1{
 
@@ -118,23 +123,24 @@ line-height: 160px;
   font-weight: normal;
   z-index: 2;
   right: 360px;
-  top: 100px;
+  top: 200px;
   position: absolute;
 
 }
 
 
-.contents{
-    z-index: 1;
+section.contents{
+
     width: 100%;
-    height: 6400px;
+    height: auto;
     display: flex;
     flex-direction: column;
  gap: 384px;
     align-items: center;
-    justify-content: flex-end;
 
-    background-color: yellow;
+margin-top: -1740px;
+
+
 }
 
 
@@ -144,7 +150,7 @@ line-height: 160px;
     height: 821px;
  display: flex;
         justify-content: space-between;
-         background-color: aqua;
+   
 }
 
 .contents .con a{
@@ -162,6 +168,32 @@ line-height: 160px;
     flex-direction: column;
     align-items: flex-start;
     align-self:flex-end;
+    gap: 63px;
+}
+
+.contents .con_2 a .text_2{
+    width: 459px;
+    height: 522px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self:flex-end;
+    gap: 30px;
+transform: translateY(210px);
+
+}
+
+
+.contents .con_4 a .text_2{
+    width: 459px;
+    height: 522px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self:flex-end;
+    gap: 25px;
+transform: translateY(120px);
+
 }
 .contents .con .text a .logo{
 width: 324px;
@@ -174,29 +206,110 @@ background-color: #D99B6E;
     background-size: 225px 290px;
 }
 
+.con_2 a .text_2 .logo{
+  width: 322px;
+  height:70px;
+    background-size: 322px 70px;
+ background-image: url(../img/sub_1/logo_heal.png);
+}
+
+.con_3 a .text .logo{
+  width: 212px;
+  height:172px;
+    background-size: 212px 172px;
+ background-image: url(../img/sub_1/logo_yeomiji.png);
+
+}
+
+.con_4 a .text_2 .logo{
+  width: 342px;
+  height: 156px;
+    background-size:  342px 156px;
+ background-image: url(../img/sub_1/logo_scandi.png);
+
+}
+
+.contents .con_3 a .text{
+    width: 459px;
+    height: 522px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self:flex-end;
+    gap: 40px;
+  transform: translateY(120px);
+}
 
 .contents .con a .text .u1{
+
     display: flex;
     align-items: flex-start;
-    width: 494px;
+    width: 480px;
     height: 177px;
 }
 .contents .con a .text .u1 .line{
-    width: 12px;
-    height: 177px;
+    width: 8px;
+    height: 150px;
     background-color: #CB8F63;
     align-self: flex-start;
     border-radius: 100px;
 }
 
 .contents .con a .text .u1 .ss{
-font-size: 28px;
-line-height: 40px;
+font-size: 24px;
+line-height: 38px;
 text-align: left;
-padding-left: 30px;
+padding-left: 24px;
 color: #fff;
+  font-family: 'Cafe24Simplehae', sans-serif;
+     font-weight: normal;
 }
 
+.contents .con_4 a .text_2 .u1{
+
+    display: flex;
+align-items: flex-end;
+    width: 480px;
+    height: 177px;
+    transform: translateX(190px);
+}
+
+
+.contents .con_2 a .text_2 .u1{
+
+    display: flex;
+align-items: flex-end;
+    width: 480px;
+    height: 177px;
+    transform: translateX(238px);
+}
+.contents .con a .text_2 .u1 .line{
+    width: 8px;
+    height: 150px;
+    background-color: #CB8F63;
+    align-self: flex-end;
+    border-radius: 100px;
+}
+
+.contents .con a .text_2 .u1 .ss{
+font-size: 24px;
+line-height: 38px;
+text-align: right;
+padding-right: 24px;
+color: #fff;
+  font-family: 'Cafe24Simplehae', sans-serif;
+     font-weight: normal;
+}
+
+
+.curveline{
+  position: absolute;
+  right: 25px;
+  top: 24px;
+  width: 457px;
+  height: 230px;
+  background-image: url(../img/sub_1/curvelinedot.svg);
+}
 .cbox{
 display: flex;
 flex-direction: column;
@@ -208,6 +321,19 @@ flex-direction: column;
    justify-content: center;
 }
 
+
+.cbox_2{
+display: flex;
+flex-direction: column;
+    width: 526px;
+    height:806px;
+    background-color:#B78058 ;
+   border-radius: 40px 200px;
+   position: relative;
+   justify-content: center;
+   transform: scaleX(-1);
+
+} 
 .cbox .img{
     position: absolute;
     bottom: 10px;
@@ -218,4 +344,159 @@ height: 586px;
 background-color:#FFFFFF ;
 border-radius: 40px 220px 40px 200px;
 
+}
+
+
+
+.con_2 a .cbox_2 .img{
+   transform: scaleX(-1);
+  background-image: url(../img/sub_1/healimg.jpg);
+border-radius: 220px 40px 220px 40px;
+}
+
+
+.con_4 a .cbox_2 .img{
+   transform: scaleX(-1);
+  background-image: url(../img/sub_1/scandiimg.png);
+border-radius: 220px 40px 220px 40px;
+}
+
+.con_3 a .cbox .img{
+ 
+  background-image: url(../img/sub_1/yeomijiimg.jpg);
+
+}
+
+
+
+.cbox_2 .img{
+    position: absolute;
+    bottom: 10px;
+    align-self: center;
+
+width: 508px;
+height: 586px;
+background-color:#FFFFFF ;
+border-radius: 40px 220px 40px 200px;
+
+
+}
+
+
+.cbox ul{
+  top: 68px;
+  left: 44px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: self-start;
+}
+
+.con_4 .cbox_2 ul{
+  transform: translateY(15px);
+}
+
+.cbox ul li.h3{
+  font-size: 80px;
+  line-height: 80px;
+   font-family: 'Cafe24Danjunghae', sans-serif;
+     font-weight: normal;
+     color: #fff;
+
+}
+
+.cbox ul li.p2{
+   font-family: 'Cafe24Simplehae', sans-serif;
+   font-size: 30px;
+   line-height: 30px;
+    font-weight: normal;
+     color: #fff;
+}
+
+
+
+.cbox_2 ul{
+  top: 68px;
+  left: 44px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: self-start;
+}
+.con_2 ul li.h3{
+  font-size: 80px;
+  line-height: 80px;
+   font-family: 'Cafe24Danjunghae', sans-serif;
+     font-weight: normal;
+     color: #fff;
+       transform: scaleX(-1);
+
+
+}
+
+.con_2 ul li.p2{
+   font-family: 'Cafe24Simplehae', sans-serif;
+   font-size: 30px;
+   line-height: 30px;
+    font-weight: normal;
+     color: #fff;
+       transform: scaleX(-1);
+
+}
+
+.con_4 ul li.h3{
+  font-size: 60px;
+  line-height: 60px;
+   font-family: 'Cafe24Danjunghae', sans-serif;
+     font-weight: normal;
+     color: #fff;
+       transform: scaleX(-1);
+
+
+}
+
+.con_4 ul li.p2{
+   font-family: 'Cafe24Simplehae', sans-serif;
+   font-size: 30px;
+   line-height: 30px;
+    font-weight: normal;
+     color: #fff;
+       transform: scaleX(-1);
+
+}
+
+.con_1 a .text .logo{
+ left: 44px;
+ bottom: 100px;
+  width: 225px;
+  height: 290px;
+   background-image: url(../img/sub_1/logo_regartee.png);
+
+
+}
+
+
+.turnF{
+  width: 93px;
+  height: 93px;
+  border-radius: 300px;
+  background-color: #B78058;
+  transform: translateY(-80px);
+
+}
+.turnF a{
+  width: 100%;
+  height: 100%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.turnF a p{
+  color: #502650;
+  font-size: 45px;
+  line-height: 45px;
+    font-family: 'Cafe24Danjunghae', sans-serif;
+    font-weight: normal;
 }

@@ -1,5 +1,30 @@
 @charset "utf-8";
 
+.body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.mainlogo {
+  position: absolute;
+  width: 490px;
+  height: 632px;
+top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../asset/img/logo_main.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 300;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.mainlogo.fade {
+  opacity: 0;
+}
 figure.vid {
     width: 100%;
     height: 100%;
@@ -7,6 +32,8 @@ figure.vid {
     left: 0;
     top: 0;
 }
+
+
 
 figure.vid video {
     width: 100%;
@@ -20,7 +47,7 @@ main.wrap {
 }
 
 main h2 {
-    font-family: var(--Roboto-serif);
+ font-family: 'NewYork', serif;
     font-size: 12rem;
     color: var(--w-color);
     font-weight: 400;
@@ -29,7 +56,7 @@ main h2 {
 }
 
 main h3 {
-    font-family: var(--Playfair);
+        font-family: 'Kugile', sans-serif;
     font-size: 12rem;
     color: var(--w-color);
     font-weight: 500;
@@ -104,7 +131,7 @@ a.more .plus::after{
 }
 .brand_story .img_box{
     width: 900px; height: 500px;  
-    background: url(../asset/img/tree_banner_최슬기_3.jpg) center/cover;
+    background: url(../asset/img/little_mid_banner_2.png) center/cover;
     position: absolute;
     right: 0; bottom: 0;
     border-radius: 40px;
@@ -146,26 +173,47 @@ a.more .plus::after{
 }
 .best_product .right_box ul li{
     width: 40%; height: 40%;
-    border-radius: 50px;
+   border-radius: 0 150px 0 80px;
 /*     transition: background-color .3s; */
     background: url(../asset/img/fix_imgbox_bg.jpg) center/cover ;
 }
 .best_product .right_box ul li:nth-child(1){
-    background-image: url(../asset/img/product2_2.jpg);
+    background-image: url(../asset/img/imgcut_1.jpg);
 }
 .best_product .right_box ul li:nth-child(2){
-    background-image: url(../asset/img/product3_3.jpg);
+    background-image: url(../asset/img/imgcut_2.jpg);
 }
 .best_product .right_box ul li:nth-child(3){
-    background-image: url(../asset/img/product4_4.jpg);
+    background-image: url(../asset/img/imgcut_3.jpg);
 }
 .best_product .right_box ul li:nth-child(4){
-    background-image: url(../asset/img/product5_5.jpg);
+    background-image: url(../asset/img/imgcut_4.jpg);
 }
-.best_product .right_box ul li:hover{
-    background: var(--main-yellow-l);
-   transition-duration: 0.5s;
+
+.best_product .right_box ul li:nth-child(1):hover{
+    background-image: url(../asset/img/back_2.jpg);
+    background-size: contain;
+     transition-duration: 0.5s;
 }
+.best_product .right_box ul li:nth-child(2):hover{
+    background-image: url(../asset/img/back_1.jpg);
+       background-size: contain;
+        transition-duration: 0.5s;
+}
+.best_product .right_box ul li:nth-child(3):hover{
+    background-image: url(../asset/img/back_3.jpg);
+       background-size: contain;
+        transition-duration: 0.5s;
+}
+.best_product .right_box ul li:nth-child(4):hover{
+    background-image: url(../asset/img/back_2.jpg);
+       background-size: contain;
+        transition-duration: 0.5s;
+}
+
+
+
+
 .best_product .right_box ul li:nth-child(2n){
     margin-top: 300px;
 }
@@ -174,47 +222,361 @@ a.more .plus::after{
     display: flex;
     flex-direction: column;
     padding: 30px;
-    color: #ffffff;
+
 }
 .best_product .right_box ul li:hover a{
     justify-content: center;
     align-items: center;
 }
 .best_product .right_box ul li a strong{
-    font-size: 1.7rem;
-    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+ 
     color: #ffffff;
-    line-height: 1.8;
+
+   font-family: 'Classy Vogue', serif; 
 } 
 .best_product .right_box ul li:hover a strong{
     display: none;
 } 
 .best_product .right_box ul li a span{
+    padding-top: 10px;
     font-size: 1.3rem;
+        color: #ffffff;
 }
 .best_product .right_box ul li:hover a span{
+    transform: translateY(150px);
     font-size: 2.2rem;
     font-weight: 600;
     line-height: 2.2;
+        font-family: 'Cafe24Simplehae', sans-serif;
+        color: #fff;
 }
 .best_product .right_box ul li a em{
+      transform: translateY(150px);
     font-family: var(--Roboto-serif);
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     display: none;
+    color: #fff;
 }
 .best_product .right_box ul li:hover a em{
     display: inline;
+  
 }
+
+
+/* Main_product */
+
+section.Main_product{
+
+    width: 100%;
+    height: 800px;
+    position: relative;
+     overflow-x: hidden; /* 반드시 추가 */
+      overflow-y: hidden; 
+
+}
+
+
+.Main_product h3{
+    width: 100%;
+    margin-bottom: 100px;
+    transition: 1.5s;
+    margin-left: 50px;
+}
+
+.Main_product .warp{
+    margin-top: 30px;
+       left: 46%;
+  transform: translateX(-50%);
+     width: 1650px;
+     height: 100%;
+     position: relative;
+  display: flex;
+  margin: 0 auto;
+    overflow: hidden;
+
+  box-sizing: border-box;
+ 
+
+}
+
+
+.swiper-container {
+    
+  position: relative;
+  max-width: 1500px;
+  margin: 80px auto;
+  overflow: hidden;
+    width: 100%;
+  display: flex;
+
+  justify-content: center;
+
+   margin: 0 auto;
+}
+
+
+
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+gap: 40px;
+     will-change: transform;
+      transition: transform 0.4s ease-in-out;
+  width: max-content; /* 내부 요소만큼만 너비 설정 */
+}
+
+
+
+.card_1,
+ .card_3,
+  .card_5,
+    .card_7,
+     .card_9{
+width: 335px;
+height: 430px;
+border-radius: 0px 44px 71px 0px;
+ background-color: rgba(178, 73, 54, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+position: relative;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.card_2,
+
+  .card_6,
+    .card_10{
+width: 335px;
+height: 430px;
+border-radius: 0px 44px 71px 0px;
+ background-color: rgba(178, 172, 136, 0.80);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+position: relative;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.card_4,
+  .card_8
+ {
+width: 335px;
+height: 430px;
+border-radius: 0px 44px 71px 0px;
+ background-color:rgba(164, 213, 166, 0.80);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+position: relative;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.card_1 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_amel_1.jpg);
+
+}
+
+.card_2 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_olive_1.jpg);
+}
+
+.card_3 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_amel_3.jpg);
+}
+
+.card_4 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_amel_4.jpg);
+}
+
+.card_5 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_aqua_1.jpg);
+}
+
+.card_6 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_olive_2.jpg);
+}
+
+
+.card_7 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_amel_4.jpg);
+}
+.card_8 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_aqua_2.jpg);
+}
+
+.card_9 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_olive_3.jpg);
+}
+
+.card_10 .img{
+    width: 291px;
+height: 277px;
+background-image: url(../asset/img/pr_aqua_3.jpg);
+}
+
+
+
+
+
+
+
+
+
+.Main_product .cc {
+ 
+  flex-shrink: 0;
+/* 카드 실제 너비 */
+   display: flex;
+  flex: 0 0 335px;
+  width: 335px;
+  position: relative;
+
+}
+
+
+
+.Main_product .cc .img {
+    top: 18px;
+    left: 22px;
+    border-radius: 0px 176px 27px 27px;
+     position: absolute;
+width: 291px;
+height: 277px;
+  object-fit: cover;
+  background-size: contain;
+
+}
+
+.Main_product .cc .info {
+  position: absolute;
+  bottom: 5px;
+
+  width: 300px;
+
+  padding: 12px 16px;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 4px; /* 간격을 줄임 */
+}
+
+.Main_product .cc .info h3 {
+  font-family: 'Cafe24Simplehae', sans-serif;
+  font-size: 22px;
+  line-height: 22px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.Main_product .cc .info p {
+  font-size: 13px;
+  line-height: 13px;
+  padding-top: 3px;
+  color: #fff;
+  font-family: 'Classy Vogue', serif;
+  font-weight: normal;
+}
+
+.Main_product .cc .info span {
+  font-size: 32px;
+  line-height:32px;
+  padding-top: 15px;
+  color: #fff;
+  font-family: 'Classy Vogue', serif;
+  font-weight: normal;
+}
+
+.Main_product .cc .info h3,
+.Main_product .cc .info p,
+.Main_product .cc .info span {
+  margin: 0; /* ✅ 기본 마진 제거 */
+}
+
+
+
+
+.Main_product .nav {
+
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+ 
+}
+
+
+
+
+.Main_product .nav.prev {
+      top: 27%;
+  transform: translateY(-60%);
+      position: absolute;
+  left: 10px; /* or left: 0 */
+}
+.Main_product .nav.next {
+      top: 27%;
+  transform: translateY(-60%);
+      position: absolute;
+  right: 10px; /* or right: 0 */
+}
+
+.Main_product .nav i{
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* our_business */
 .our_business h3{
-    padding: 150px 0;
+
+    padding: 280px 100px 0 0 ;
     transition: 1.5s;
 }
 .our_business .list ul li{
     width: 100%;
     height: 500px;
-    border-radius: 50px;
+    border-radius: 300px 30px 140px 30px;
     margin-block-start: 10vh;
     background: #ccc;
     color: #fff;
@@ -224,17 +586,21 @@ a.more .plus::after{
     filter: saturate(70%) contrast(80%);
     transition: .6s;
 }
+
+.our_business .list ul li:nth-child(2){
+     border-radius: 30px 300px 30px 140px;
+}
 .our_business .list ul li:hover{
     filter: saturate(100%) contrast(120%);
 }
 .our_business .list ul li:nth-child(1){
-    background-image: url(../asset/img/r&d.jpg);
+    background-image: url(../asset/img/capaign_1.jpg);
 }
 .our_business .list ul li:nth-child(2){
-    background-image: url(../asset/img/oem_odm.jpg);
+    background-image: url(../asset/img/capaign_2.jpg);
 }
 .our_business .list ul li:nth-child(3){
-    background-image: url(../asset/img/eco_farm.jpg);
+    background-image: url(../asset/img/capaign_3.jpg);
 }
 .our_business .list ul li a{
     display: flex;
@@ -243,16 +609,36 @@ a.more .plus::after{
     width: 100%; height: 100%;
     justify-content: flex-end;
 }
+.our_business .list ul li:nth-child(2) a{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 80px;
+    width: 100%; height: 100%;
+    justify-content: flex-end;
+}
 .our_business .list ul li a h4{
-    font-size: 3.5rem;
-    letter-spacing: 1.5px;
-    font-weight: 500;
+    font-size: 80px;
+   line-height: 80px;
+    font-weight: normal;
+       font-family: 'Classy Vogue', serif; 
+         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 .our_business .list ul li a p{
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.6;
     margin-top: 20px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.our_business .list ul li:nth-child(2) a p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: end;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* instargram */

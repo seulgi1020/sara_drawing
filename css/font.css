@@ -7,6 +7,7 @@
    font-family: 'Classy Vogue', serif; 
      font-family: 'Cafe24Danjunghae', sans-serif;
      font-family: 'YUniverse', sans-serif;
+       font-family: 'Cafe24Simplehae', sans-serif;
 */
 
    @font-face {
@@ -105,6 +106,14 @@
 @font-face {
   font-family: 'YUniverse';
   src: url('./font/YUniverse-L.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Cafe24Simplehae';
+  src: url('./font/Cafe24Simplehae-v2.0.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

@@ -1,6 +1,6 @@
 $(function () {
 
- $(window).on('load', function () {
+  $(window).on('load', function () {
     console.log("🔥 window load 완료, 인트로 애니메이션 시작");
 
     gsap.registerPlugin(MotionPathPlugin);
@@ -44,14 +44,12 @@ $(function () {
             onStart: function () {
               document.querySelector('.f_light').classList.add('shine');
 
-              // ✨ outline 등장
               gsap.to(".outline", {
                 duration: 3,
                 opacity: 1,
                 ease: "power2.inOut"
               });
 
-              // ✨ 위치 고정 & scale 반복
               gsap.to(".f_light", {
                 scale: 1.1,
                 repeat: -1,
@@ -60,35 +58,35 @@ $(function () {
                 ease: "sine.inOut"
               });
             },
-             onComplete: function () {
-            gsap.to(".f_light", {
-              duration: 1,
-              rotation: 360 * 2,
-              y: 126,
-              ease: "power2.out",
-              onComplete: function () {
-                setTimeout(function () {
-                  console.log("🎭 인트로 사라짐 시작");
-                  $('.intro_show').fadeOut(2000, function () {
-                    console.log("✅ 애니메이션 완료, 페이지 이동!");
-                    window.location.href = "indexmain.html"; // 원하는 파일명으로 변경
-                  });
-                }, 600);
-              }
-            });
-          }
-        });
-      }
+            onComplete: function () {
+              gsap.to(".f_light", {
+                duration: 1,
+                rotation: 360 * 2,
+                y: 126,
+                ease: "power2.out",
+                onComplete: function () {
+                  setTimeout(function () {
+                    console.log("🎭 인트로 사라짐 시작");
+                    $('.intro_show').fadeOut(2000, function () {
+                      console.log("✅ 애니메이션 완료, 페이지 이동!");
+                      window.location.href = "indexmain.html"; // ← 여기 경로도 존재 확인 필요!
+                    });
+                  }, 600);
+                }
+              });
+            }
+          });
+        }
+      });
     });
   });
 
   $(window).on('resize', function () {
-    console.log("🔄 윈도우 리사이즈 감지됨, 레이아웃 안정화 필요 시 여기에 코드 추가");
+    console.log("🔄 윈도우 리사이즈 감지됨");
   });
 
-  $(window).on('load pageshow', runIntroAnimation); // 혹시 runIntroAnimation 따로 있으면 여기도 체크!
-});
-
-
+ function runIntroAnimation() {
+  console.log("runIntroAnimation 실행됨");
+}
 
 });

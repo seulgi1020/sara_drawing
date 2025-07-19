@@ -84,57 +84,59 @@ $(function () {
 
 
 
-  /* .b_story 화면 보이기 */
-  const $trigger = $('.b_story_trigger');
-  const $bgSpread = $('.bg_spread');
-  const $bStory = $('.b_story');
-  const $textboxP5 = $('.textbox_p5');  // .textbox_p5 선택자 추가
-  const $textboxP6 = $('.textbox_p6');  // .textbox_p6 선택자 추가
-  let triggered = false;
+ const $trigger = $('.b_story_trigger');
+const $bgSpread = $('.bg_spread');
+const $bStory = $('.b_story');
+const $textboxP5 = $('.textbox_p5');
+const $textboxP6 = $('.textbox_p6');
 
-  $(window).on('scroll', function () {
-    const triggerTop = $trigger.offset().top;
-    const scrollTop = $(window).scrollTop();
-    const windowHeight = $(window).height();
+let triggered = false;
+let canTrigger = true; // 새로 추가: 강제 반복 제한
 
-    // 애니메이션이 실행되었으면, 다시 실행되지 않도록 방지
-    if (scrollTop + windowHeight * 0.7 > triggerTop && !triggered) {
-      triggered = true;
+$(window).on('scroll', function () {
+  const triggerTop = $trigger.offset().top;
+  const scrollTop = $(window).scrollTop();
+  const windowHeight = $(window).height();
+  const bStoryBottom = $bStory.offset().top + $bStory.outerHeight();
 
-      $('body').addClass('lock-scroll');
-      $trigger.addClass('spread-on');
+  // ✅ 조건 추가: .b_story 영역을 지나쳤으면 실행 금지
+  if (
+    scrollTop + windowHeight * 0.7 > triggerTop &&
+    scrollTop < bStoryBottom && // ✅ 핵심 조건!
+    !triggered &&
+    canTrigger
+  ) {
+    triggered = true;
+    canTrigger = false;
 
-      // 퍼짐 완료 후 스크롤
+    $('body').addClass('lock-scroll');
+    $trigger.addClass('spread-on');
+
+    setTimeout(() => {
+      const offsetTop = $bStory.offset().top;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+
       setTimeout(() => {
-        const offsetTop = $bStory.offset().top;
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        $bStory.addClass('visible');
+        $bgSpread.addClass('fade-out');
 
         setTimeout(() => {
-          $bStory.addClass('visible');
-          $bgSpread.addClass('fade-out');
+          $bStory.addClass('text-on');
+          $('body').removeClass('lock-scroll');
 
-          setTimeout(() => {
-            $bStory.addClass('text-on');
-            $('body').removeClass('lock-scroll');
+          $textboxP5.addClass('fade-left');
+          $textboxP6.addClass('fade-right');
+        }, 500);
+      }, 400);
+    }, 500);
 
-            // .textbox_p5와 .textbox_p6 애니메이션 시작
-            $textboxP5.addClass('fade-left');
-            $textboxP6.addClass('fade-right');
-
-          }, 500);
-
-        }, 400); // scroll 후 delay
-
-      }, 500); // 퍼짐 시간
-    }
-
-
-
-    // 1분마다 trigger를 다시 활성화하여 애니메이션이 반복되도록 설정
+    // ⏱ 10분 후 다시 가능
     setTimeout(() => {
-      triggered = false;  // 1분 후 triggered 플래그 초기화
-    }, 600000); // 1분(60000ms) 후 애니메이션 재실행 가능
-  });
+      triggered = false;
+      canTrigger = true;
+    }, 600000); // 10분
+  }
+});
   // 전등 애니메이션
   $(window).on('scroll.revealUp', function () {
     const $target = $('.b_story .illust');
@@ -151,6 +153,10 @@ $(function () {
       void $target[0].offsetWidth;
     }
   });
+
+
+
+  
   /* 텍스트 전환 버튼  */
   document.getElementById("langToggle").addEventListener("click", function () {
     const container = document.querySelector(".container");
