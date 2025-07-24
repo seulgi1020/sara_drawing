@@ -73,13 +73,18 @@ requestAnimationFrame(() => {
 
 
 // 프로그램 항목 순차 등장 애니메이션
-
 let lastScrollTop = 0;
-let hasActivated = false; // ✅ 상태 추적 변수
+let hasActivated = false;
 
-function isSectionInViewport(section) {
-  const rect = section.getBoundingClientRect();
-  return rect.top < window.innerHeight && rect.bottom > 0;
+function isSkiallCentered() {
+  const skiall = document.querySelector(".skiall");
+  if (!skiall) return false;
+
+  const rect = skiall.getBoundingClientRect();
+  const sectionCenter = rect.top + rect.height / 2;
+  const viewportCenter = window.innerHeight / 2;
+
+  return Math.abs(sectionCenter - viewportCenter) < 200;
 }
 
 function handleScroll() {
@@ -88,26 +93,16 @@ function handleScroll() {
   const isScrollingDown = currentScroll > lastScrollTop;
   lastScrollTop = currentScroll;
 
-  if (!section) return;
+  if (!section || hasActivated) return;
 
-  // 👇 아래로 스크롤 중 & 화면에 진입했으며, 아직 활성화되지 않은 경우
-  if (isScrollingDown && isSectionInViewport(section) && !hasActivated) {
+  if (isScrollingDown && isSkiallCentered()) {
     section.classList.add("active");
-    hasActivated = true;
-
-    // ✅ 4초 뒤에 다시 초기화 (스크롤 위로 갔다 내려오면 재실행 가능)
-    setTimeout(() => {
-      section.classList.remove("active");
-      hasActivated = false;
-    }, 4000);
+    hasActivated = true; // ✅ 이후 재실행 막기
   }
 }
 
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", handleScroll);
-
-
-
 
 
 /* mystory  애니메이션  */

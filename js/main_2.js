@@ -202,7 +202,7 @@ $(window).on('scroll', function () {
         $el.addClass('appear');
         if (selector === '.text_con') {
           setTimeout(() => $(".decotxt1").addClass("typing"), 1800);
-          setTimeout(() => $(".decotxt2").addClass("typing"), 3000);
+          setTimeout(() => $(".decotxt2").addClass("typing"), 2200);
         }
       }
     });

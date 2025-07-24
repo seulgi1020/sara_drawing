@@ -47,7 +47,7 @@ main.wrap {
 }
 
 main h2 {
- font-family: 'NewYork', serif;
+  font-family: 'Kugile', sans-serif;
     font-size: 12rem;
     color: var(--w-color);
     font-weight: 400;

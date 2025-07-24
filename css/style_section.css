@@ -1081,6 +1081,7 @@ section.what_todo .container {
   background-position: center;
   position: absolute;
   align-self: center;
+top: -5px;
 
   z-index: 5;
   animation: rotate 16s linear infinite;
@@ -1309,7 +1310,7 @@ section.what_todo .container {
 /* .what_todo 애니메이션 */
 .ani {
   opacity: 0;
-  transition: opacity 0.8s ease-in;
+  transition: opacity 0.6s ease-in;
 }
 
 .ani.appear {
@@ -1325,19 +1326,19 @@ section.what_todo .container {
 }
 
 .ap.appear {
-  transition-delay: 0.6s;
+  transition-delay: 0.4s;
 }
 
 .we.appear {
-  transition-delay: 0.9s;
+  transition-delay: 0.7s;
 }
 
 .sp.appear {
-  transition-delay: 1.2s;
+  transition-delay: 1.0s;
 }
 
 .mark.appear {
-  transition-delay: 1.5s;
+  transition-delay: 1.3s;
 }
 
 
