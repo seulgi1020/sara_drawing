@@ -1236,6 +1236,7 @@ min-height: 800px;
   justify-content: space-between;
   position: relative;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .avaliable .skiall .program{

@@ -8,7 +8,36 @@
      font-family: 'Cafe24Danjunghae', sans-serif;
      font-family: 'YUniverse', sans-serif;
        font-family: 'Cafe24Simplehae', sans-serif;
+      font-family: 'PretendardVariable', sans-serif;
+       
 */
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
+
+
+/* // <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.bitcount-<uniquifier> {
+  font-family: "Bitcount", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+ */
+
+
+
+
 
    @font-face {
     font-family: 'CaviarDreams';
@@ -116,4 +145,13 @@
   src: url('./font/Cafe24Simplehae-v2.0.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'PretendardVariable';
+  src: url('./font/PretendardVariable.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }

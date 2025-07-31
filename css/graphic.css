@@ -1,0 +1,1275 @@
+@charset "utf-8";
+body{width: 100%;
+    height: 100%;
+  background-color:#381738;
+  overflow-x: hidden; /* 전체 페이지에서 가로 스크롤 방지 */
+  position: relative;
+   overflow-y: auto;
+}
+
+
+ *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+ }
+
+header{
+
+   overflow: visible;
+width: 100%;
+height: 650px;
+display: flex;
+
+
+  position: relative;
+
+}
+
+.h_warp{
+  padding-top: 40px;
+  align-self: flex-end;
+  margin-top: 140px;
+  z-index: 10;
+  width: 1920px;
+  height: 550px;
+  border-top: solid 8px #B78058;
+    border-bottom: solid 8px #B78058;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.line{
+    width: 100%;    
+  height: 2px;         
+  background-color: #B78058; 
+}
+
+.h_warp .line.B1{position: absolute;
+top: 24px; left: 0;
+align-self: center;}
+
+.line.B2{position: absolute;
+bottom: 24px;
+align-self: center;}
+
+.h_warp .title{
+  width: 1274px;
+  height: 362px;
+  display: flex;
+  position: relative;
+}
+
+.h_warp .title h1{
+  transform: translateY(-15px);
+  padding-left: 200px;
+  width: 672px;
+  height: 368px;
+   font-family: 'Against', sans-serif; 
+  font-size: 160px;
+  line-height: 173px;
+  text-align: center;
+  color: #B78058;
+}
+
+.h_warp .title p{
+     font-family: 'Wistania';
+  position: absolute; 
+  top: 50px;
+  left: 450px;
+  font-size: 160px;
+  line-height: 160px ;
+  color:  #AF88AF;
+}
+
+
+.h_warp .right{
+  width: 570px;
+  display: flex;
+  height: 512px;
+  align-items: center;
+  justify-content: center;
+    position: relative;
+
+}
+
+.h_warp .right .img1{
+  width: 563px;
+  height: 305px;
+  background-image: url(../img/visualdesign/main_top_graphic.png);
+transform: translateX(-360px);
+
+}
+
+.h_warp .right .img2{
+  width: 270px;
+  height: 363px;
+  z-index: 3;
+  position: absolute;
+    background-image: url(../img/visualdesign/main_top_mark.png);
+top: -110px;
+  right:270px;
+  box-sizing: border-box;
+
+
+  animation: rotateYRight 10s linear infinite;
+
+
+  transform-style: preserve-3d;
+
+  
+}
+@keyframes rotateYRight {
+  0% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(-360deg); /* 왼쪽 방향으로 회전 */
+  }
+}
+
+
+section.contents{
+padding-top: 110px;
+  width: 100%;
+  height: 1200px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+
+
+.tab-buttons {
+  display: flex;
+  width: 1783px;
+height: 102px;
+align-self: center;
+justify-content: center;
+  background-color: #381738;
+  
+}
+
+.tab-button {
+  display: flex;
+  width: 445px;
+  height: 102px;
+  flex: 1;
+  background-color: #381738;
+border-radius: 60px 60px 0px 0px;
+border: solid 1px #B78058;;
+border-bottom: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+align-items: center;
+justify-content: center;
+
+ font-family: 'SUITE Variable';
+    color:#B78058;
+    font-weight: 100;
+font-size: 50px;
+line-height: 50px;
+}
+
+
+
+.tab-button.active {
+  background-color: #B78058;
+  color: #381738;
+    font-weight: 200;
+}
+
+.tab-content {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 1920px;
+  height: 920px;
+  display: none;
+  background-color: #f2ddce;
+position: relative;
+  border-top: 2px solid #B78058;
+    border-bottom: 2px solid #B78058;;
+}
+
+#tab1{  background-color: #FDE7D7;}
+
+#tab2{
+   background-color: #D5EFEB;
+   position: relative;
+}
+
+#tab3{
+   background-color: #DFAF82;
+   position: relative;
+}
+
+
+
+#tab4{
+   background-color: #FCE2F8;
+   position: relative;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.swiper-button,
+.swiper-pagination {
+  display: none;
+}
+
+/* 활성 탭에서만 보여주기 */
+#tab1.active .swiper-button,
+#tab1.active .swiper-pagination {
+  display: block;
+}
+
+#tab2.active .swiper-button,
+#tab2.active .swiper-pagination {
+  display: block;
+}
+
+#tab3.active .swiper-button,
+#tab3.active .swiper-pagination {
+  display: block;
+}
+
+#tab4.active .swiper-button,
+#tab4.active .swiper-pagination {
+  display: block;
+}
+
+
+
+  .con1 .swiper-slide {
+  display: none; /* 기본은 숨김 */
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+  .con2 .swiper-slide {
+  display: none; /* 기본은 숨김 */
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  .con3 .swiper-slide {
+  display: none; /* 기본은 숨김 */
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+  .con4 .swiper-slide {
+  display: none; /* 기본은 숨김 */
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-slide.active {
+  display: flex; /* 현재 active 슬라이드만 보이도록 */
+  animation: fadeIn 0.2s ease;
+}
+
+/* 간단한 페이드 인 효과 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+ .swiper-wrapper{
+      width: 100%;
+      height: 100%;
+
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  position: relative;
+
+}
+
+.swiper-container.con1 {
+      position: absolute;
+
+
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+      height: 860px;
+  
+      overflow: hidden;
+      display: flex;
+    }
+
+ .swiper-slide.pg1{
+  background: url(../img/visualdesign/slideall/lwng/gp1.png);
+  width: 1324px; height: 640px;
+  background-size: 1324px 640px;
+ }
+
+ .swiper-slide.pg2{
+  background: url(../img/visualdesign/slideall/lwng/gp2.png);
+  width: 1372px; height: 642px;
+ }
+
+  .swiper-slide.pg3{
+  background: url(../img/visualdesign/slideall/lwng/gp3.png);
+  width: 1372px; height: 682px;
+    background-repeat: no-repeat;
+ }
+   .swiper-slide.pg4{
+  background: url(../img/visualdesign/slideall/lwng/\ gp4.png);
+  width: 1311px; height: 622px;
+    background-repeat: no-repeat;
+ }
+   .swiper-slide.pg5{
+  background: url(../img/visualdesign/slideall/lwng/gp5.png);
+  width: 1192px; height: 616px;
+    background-repeat: no-repeat;
+ }
+   .swiper-slide.pg6{
+  background: url(../img/visualdesign/slideall/lwng/gp6.png);
+  width: 1292px; height: 648px;
+    background-repeat: no-repeat;
+ }
+
+    .swiper-slide.pg7{
+  background: url(../img/visualdesign/slideall/lwng/gp7.png);
+  width: 1300px; height: 648px;
+    background-repeat: no-repeat;
+ }
+
+    .swiper-slide.pg8{
+  background: url(../img/visualdesign/slideall/lwng/gp8.png);
+  width:1288px; height: 648px;
+    background-repeat: no-repeat;
+ }
+
+
+     .swiper-slide.pg9{
+  background: url(../img/visualdesign/slideall/lwng/gp9.png);
+  width:1288px; height: 628px;
+    background-repeat: no-repeat;
+ }
+
+      .swiper-slide.pg10{
+  background: url(../img/visualdesign/slideall/lwng/gp10.png);
+  width:1300px; height: 604px;
+    background-repeat: no-repeat;
+ }
+
+       .swiper-slide.pg11{
+  background: url(../img/visualdesign/slideall/lwng/gp11.png);
+  width:1416px; height: 684px;
+    background-repeat: no-repeat;
+ }
+       .swiper-slide.pg12{
+  background: url(../img/visualdesign/slideall/lwng/gp12.png);
+  width:1388px; height: 668px;
+    background-repeat: no-repeat;
+ }
+
+       .swiper-slide.pg13{
+  background: url(../img/visualdesign/slideall/lwng/gp13.png);
+  width:1389px; height: 706px;
+    background-repeat: no-repeat;
+ }
+
+        .swiper-slide.pg14{
+  background: url(../img/visualdesign/slideall/lwng/gp14.png);
+  width:1366px; height: 716px;
+    background-repeat: no-repeat;
+ }
+
+
+ .con1 .swiper-slide.active {
+      display: block;
+    }
+
+.con1 .swiper-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+.con1 .swiper-button.b1.prev {
+      left: 120px;
+    }
+
+ .con1 .swiper-button.b2.next {
+      right: 120px;
+    }
+
+    
+   .con1 .b1{
+    background-image: url(../img/visualdesign/slideall/lwng/left.svg);
+    width: 39px; height:79px ;
+    background-size: contain;
+    }
+
+    .con1 .b2{
+    background-image: url(../img/visualdesign/slideall/lwng/right.png);
+    width: 39px; height:79px ;
+        background-size: contain;
+    }
+
+
+
+    .con1 .swiper-pagination {
+  
+      position: absolute;
+transform: translateY(400px);
+      width: 100%;
+      text-align: center;
+    }
+
+     .con1 .swiper-dot.do1 {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgb(255, 145, 0);
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: transparent;
+    }
+
+ .con1 .swiper-dot.active {
+      background-color: orange;
+    }
+
+
+
+
+
+
+/* cellmed slide */
+
+#tab2 h2{
+
+top: 350px;
+  left: -260px;
+  position: absolute;
+  color: transparent; /* 내부 비우기 */
+  -webkit-text-stroke: 1px #1F796C; /* 아웃라인만 */
+ font-family: "Bitcount", system-ui;
+   font-weight: 400;
+
+font-size: 200px;
+line-height: 200px;
+  transform: rotate(-90deg);
+    display: inline-block;
+  overflow: hidden;
+}
+
+#tab2 h2::before {
+  content: "Cellmed"; /* 반드시 텍스트 직접 넣어야 함 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #1F796C 0%, #1F796C 100%);
+  background-size: 100% 200%;
+  background-position: center 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: waveFillUp 6s ease-in-out infinite;
+}
+
+/* 텍스트로 채우기 위한 content 사용 */
+#tab2 h2::before {
+  content: "Cellmed"; /* 꼭 실제 텍스트 지정 */
+   font-family: "Bitcount", system-ui;
+   font-weight: 400;
+
+font-size: 200px;
+line-height: 200px;
+}
+
+@keyframes waveFillUp {
+  0% {
+    background-position: center 100%;
+    opacity: 0;
+  }
+  50% {
+    background-position: center 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: center 100%;
+    opacity: 0;
+  }
+}
+
+#tab2 .pill{
+  right: 120px;
+  bottom: 100px;
+  position: absolute;
+  background-image: url(../img/visualdesign/slideall/cellmed/pill.png);
+  width: 59px; height:150px;
+  background-size: contain;
+    background-repeat: no-repeat;
+      animation: spin 15s linear infinite;
+  transform-origin: center center; /* 중심축 회전 */
+  display: block;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); /* 시계방향 한 바퀴 */
+  }
+}
+
+ 
+
+
+
+
+
+  .swiper-container.con2 {
+      position: absolute;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+      height: 860px;
+  
+      overflow: hidden;
+      display: flex;
+    }
+
+    
+.con2 .swiper-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+
+.con2 .swiper-button.b3.prev {
+      left: 250px;
+    }
+
+ .con2 .swiper-button.b4.next {
+      right: 250px;
+    }
+
+    
+   .con2 .b3{
+    background-image: url(../img/visualdesign/slideall/cellmed/left.svg);
+    width: 39px; height:72px ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+
+    .con2 .b4{
+    background-image: url(../img/visualdesign/slideall/cellmed/right.png);
+    width: 39px; height:72px ;
+        background-size: contain;
+            background-repeat: no-repeat;
+    }  
+ .con2 .swiper-slide.active {
+      display: block;
+    }
+
+
+    .con2 .swiper-wrapper{
+      width: 100%;
+      height: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+
+}
+    .con2 .swiper-pagination {
+  
+      position: absolute;
+transform: translateY(400px);
+      width: 100%;
+      text-align: center;
+    }
+
+ .swiper-slide.pc1{
+  background: url(../img/visualdesign/slideall/cellmed/gc1.png);
+  width: 1156px; height: 601px;
+
+    background-size: contain;
+ }
+
+
+ .swiper-slide.pc2{
+    background-image: url(../img/visualdesign/slideall/cellmed/pc2.png);
+    width: 1267px; height:584px ;
+    background-size: contain;
+    }
+
+     .swiper-slide.pc3{
+    background-image: url(../img/visualdesign/slideall/cellmed/pc3.png);
+    width: 1267px; height:584px ;
+    background-size: contain;
+    }
+
+        .swiper-slide.pc4{
+    background-image: url(../img/visualdesign/slideall/cellmed/pc4.png);
+    width: 1267px; height:584px ;
+    background-size: contain;
+    }
+
+          .swiper-slide.pc5{
+    background-image: url(../img/visualdesign/slideall/cellmed/pc5.png);
+    width: 1267px; height:584px ;
+    background-size: contain;
+    }
+
+
+            .swiper-slide.pc6{
+    background-image: url(../img/visualdesign/slideall/cellmed/pc6.png);
+    width: 1267px; height:584px ;
+    background-size: contain;
+    }
+
+    
+            .swiper-slide.pc7{
+    background-image: url(../img/visualdesign/slideall/cellmed/pc7.png);
+    width: 1267px; height:584px ;
+    background-size: contain;
+    }
+           .swiper-slide.pc8{
+    background-image: url(../img/visualdesign/slideall/cellmed/pc8.png);
+    width: 1267px; height:584px ;
+    background-size: contain;
+    }
+
+
+
+
+
+
+
+ .con2 .swiper-dot.do2 {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #41b09f;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: transparent;
+    }
+
+.con2 .swiper-dot.do2.active {
+      background-color: #41b09f;
+    }
+
+
+
+    /* tiana */
+.swiper-container.con3 {
+      position: absolute;
+
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+      height: 816px;
+  
+      overflow: hidden;
+      display: flex;
+
+    }
+
+
+   .con3 .swiper-wrapper{
+      width: 100%;
+      height: 100%;
+
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+
+}
+
+
+ .con3 .swiper-slide.gt1{
+  background: url(../img/visualdesign/slideall/tiana/gt1png.png);
+  width: 1289px; height: 680px;
+background-repeat: no-repeat;
+margin-left: -60px;
+    background-size: contain;
+ }
+
+          .swiper-slide.gt2{
+    background-image: url(../img/visualdesign/slideall/tiana/gt2png.png);
+    width: 1160px; height:784px ;
+    background-size: contain;
+    }
+
+
+    
+          .swiper-slide.gt3{
+    background-image: url(../img/visualdesign/slideall/tiana/gt3png.png);
+    width: 1026px; height:698px ;
+    background-size: contain;
+    }
+
+     .swiper-slide.gt4{
+    background-image: url(../img/visualdesign/slideall/tiana/gt4png.png);
+    width: 1340px; height:672px ;
+    background-size: contain;
+    }
+
+      .swiper-slide.gt5{
+    background-image: url(../img/visualdesign/slideall/tiana/gt5png.png);
+    width: 1332px; height:684px ;
+    background-size: contain;
+    }
+
+          .swiper-slide.gt6{
+    background-image: url(../img/visualdesign/slideall/tiana/gt6png.png);
+    width: 1332px; height:664px ;
+    background-size: contain;
+    } 
+
+       .swiper-slide.gt7{
+    background-image: url(../img/visualdesign/slideall/tiana/gt7png.png);
+    width: 1332px; height:664px ;
+    background-size: contain;
+    }
+
+           .swiper-slide.gt8{
+    background-image: url(../img/visualdesign/slideall/tiana/gt8png.png);
+    width: 1320px; height:632px ;
+    background-size: contain;
+    }
+
+               .swiper-slide.gt9{
+    background-image: url(../img/visualdesign/slideall/tiana/gt9png.png);
+    width: 1348px; height:664px ;
+    background-size: contain;
+    }
+
+                   .swiper-slide.gt10{
+    background-image: url(../img/visualdesign/slideall/tiana/gt10png.png);
+    width: 1348px; height:664px ;
+    background-size: contain;
+    }
+               .swiper-slide.gt11{
+    background-image: url(../img/visualdesign/slideall/tiana/gt11png.png);
+    width: 1348px; height:664px ;
+    background-size: contain;
+    }
+
+
+
+
+
+
+
+
+
+.con3 .swiper-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+
+
+
+   .con3 .swiper-wrapper{
+      width: 100%;
+      height: 100%;
+
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+
+}
+    .con3 .swiper-pagination {
+  
+      position: absolute;
+transform: translateY(400px);
+      width: 100%;
+      text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+ .con3 .swiper-button.b5.prev {
+      left: 127px;
+      z-index: 3;
+    }
+
+  .con3 .swiper-button.b6.next {
+      right:127px;
+            z-index: 3;
+    }
+ .con3 .b5{
+    background-image: url(../img/visualdesign/slideall/tiana/left.svg);
+    width: 39px; height:79px ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+
+ .con3 .b6{
+  background-image: url(../img/visualdesign/slideall/tiana/right.png);
+  width: 39px; height:79px ;
+        background-size: contain;
+            background-repeat: no-repeat;
+    }
+
+
+    
+
+
+
+
+
+
+  .con3 .swiper-dot.do3 {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #C98F59;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: transparent;
+    }
+
+.con3 .swiper-dot.do3.active {
+      background-color: #C98F59;
+    }
+
+
+    /* freelancer */
+
+
+    .swiper-container.con4 {
+      position: absolute;
+
+
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+      height: 920px;
+  
+      overflow: hidden;
+      display: flex;
+    }
+
+
+        
+.con4 .swiper-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+
+.con4 .swiper-button.b7.prev {
+      left: 280px;
+    }
+
+ .con4 .swiper-button.b8.next {
+      right: 280px;
+    }
+
+    
+   .con4 .b7{
+    background-image: url(../img/visualdesign/slideall/cellmed/left.svg);
+    width: 39px; height:72px ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+
+    .con4 .b8{
+    background-image: url(../img/visualdesign/slideall/cellmed/right.png);
+    width: 39px; height:72px ;
+        background-size: contain;
+            background-repeat: no-repeat;
+    }  
+ .con4 .swiper-slide.active {
+      display: block;
+    }
+
+
+    .con4 .swiper-wrapper{
+      width: 100%;
+      height: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+
+}
+    .con4 .swiper-pagination {
+  
+      position: absolute;
+transform: translateY(400px);
+      width: 100%;
+      text-align: center;
+    }
+
+
+      .con4 .swiper-dot.do4 {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #EE9BE1;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: transparent;
+    }
+
+.con4 .swiper-dot.do4.active {
+      background-color: #EE9BE1;
+    }
+
+ .swiper-slide.gf1{
+  background: url(../img/visualdesign/slideall/free/gf1.png);
+  width: 1900px; height: 920px;
+
+    background-size: contain;
+ }
+
+ .deco{
+  position: absolute;
+  bottom: 28px;
+  left: 20px;
+  width: 303px;
+  height: 886px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+
+  .deco .ss{
+background-image: url(../img/visualdesign/slideall/free/SSS.png);
+ width: 216px;
+  height: 142px;
+
+  }
+
+    .deco .ee{
+background-image: url(../img/visualdesign/slideall/free/eee.png);
+ width: 215px;
+  height: 157px;
+
+  }
+
+      .deco .uu{
+background-image: url(../img/visualdesign/slideall/free/uuu.png);
+ width: 215px;
+  height: 177px;
+
+  }
+
+ .deco .LL{
+background-image: url(../img/visualdesign/slideall/free/LLL.png);
+ width: 216px;
+  height: 154px;
+
+  }
+
+  @keyframes shakeX {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-5px); }
+  50%  { transform: translateX(5px); }
+  75%  { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes shakeXReverse {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(5px); }
+  50%  { transform: translateX(-5px); }
+  75%  { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake-horizontal-reverse {
+  animation: shakeXReverse 1.0s ease-in-out infinite;
+}
+
+.shake-horizontal {
+  animation: shakeX 1.0s ease-in-out infinite;
+}
+
+.b_icon {
+  width: 230px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: translateY(15px);
+  overflow: hidden;
+}
+
+.b_icon > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.b_icon > div.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+ .c_1{
+      background-image: url(../img/visualdesign/slideall/free/cut_1.png);
+      width: 184px;
+      height:220px;
+      background-size: 184px 220px ;
+background-size: cover;
+background-position: center;
+      background-repeat: no-repeat;
+    }
+
+
+ .c_2{
+      background-image: url(../img/visualdesign/slideall/free/cut_2.png);
+      width: 209px;
+      height:202px;
+      background-size: 209px 202px ;
+background-size: cover;
+background-position: center;
+      background-repeat: no-repeat;
+    }
+
+     .c_3{
+      background-image: url(../img/visualdesign/slideall/free/cut_3.png);
+      width: 215px;
+      height:215px;
+      background-size: 215px 215px ;
+background-size: cover;
+background-position: center;
+      background-repeat: no-repeat;
+    }
+
+         .c_4{
+      background-image: url(../img/visualdesign/slideall/free/cut_4.png);
+      width: 227px;
+      height:227px;
+      background-size: 227px 227px ;
+background-size: cover;
+background-position: center;
+      background-repeat: no-repeat;
+    }
+         .c_5{
+      background-image: url(../img/visualdesign/slideall/free/cut_5.png);
+      width: 221px;
+      height: 221px;
+      background-size:  221px 221px ;
+background-size: cover;
+background-position: center;
+      background-repeat: no-repeat;
+    }
+
+
+.disco{
+  position:absolute;
+  right: 20px;
+
+top: 50px;
+  background-image: url(../img/visualdesign/slideall/free/disco.png);
+      width: 244px;
+      height: 244px;
+      background-size:  244px 244px ;
+background-size: cover;
+background-position: center;
+      background-repeat: no-repeat;
+        animation:
+    floatUpDown 1.6s ease-in-out infinite,
+    sparkle 2.2s ease-in-out infinite;
+
+}
+@keyframes floatUpDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes sparkle {
+  0%, 100% { filter: brightness(1) drop-shadow(0 0 3px white); }
+  25% { filter: brightness(1.3) drop-shadow(0 0 5px #ffe6ff); }
+  50% { filter: brightness(1.6) drop-shadow(0 0 8px #ffccff); }
+  75% { filter: brightness(1.3) drop-shadow(0 0 5px #ffe6ff); }
+}
+
+
+ .swiper-slide.gf2{
+  background: url(../img/visualdesign/slideall/free/gf2.png);
+  width: 1296px; height: 705px;
+margin-right: -20px;
+    background-size: contain;
+ }
+
+  .swiper-slide.gf3{
+  background: url(../img/visualdesign/slideall/free/gf3.png);
+  width: 1279px; height: 699px;
+margin-right: -20px;
+    background-size: contain;
+ }
+
+   .swiper-slide.gf4{
+  background: url(../img/visualdesign/slideall/free/gf4.png);
+  width: 1257px; height: 689px;
+margin-right: -20px;
+    background-size: contain;
+ }
+
+ 
+   .swiper-slide.gf5{
+  background: url(../img/visualdesign/slideall/free/gf5.png);
+  width: 1257px; height: 689px;
+margin-right: -20px;
+    background-size: contain;
+ }
+
+    .swiper-slide.gf6{
+  background: url(../img/visualdesign/slideall/free/gf6.png);
+  width: 1257px; height: 689px;
+margin-right: -20px;
+    background-size: contain;
+ }
+
+     .swiper-slide.gf7{
+  background: url(../img/visualdesign/slideall/free/gf7.png);
+  width: 1257px; height: 689px;
+margin-right: -20px;
+    background-size: contain;
+ }
+
+
+ 
+     .swiper-slide.gf8{
+  background: url(../img/visualdesign/slideall/free/gf8.png);
+  width: 1257px; height: 689px;
+margin-right: -20px;
+    background-size: contain;
+ }
+
+      .swiper-slide.gf9{
+  background: url(../img/visualdesign/slideall/free/gf9.png);
+  width: 1257px; height: 689px;
+margin-right: -20px;
+    background-size: contain;
+ }
+
+       .swiper-slide.gf10{
+  background: url(../img/visualdesign/slideall/free/gf10.png);
+  width: 1257px; height: 689px;
+margin-right: -20px;
+    background-size: contain;
+ }
+ 
+.rolling-footer{
+  width: 1920px;
+  height: 140px;
+    overflow: hidden;
+  white-space: nowrap;
+  background-color:#381738;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+ .marquee-wrapper{
+    display: flex;
+  width: 200%;
+
+
+    height: 64px;
+        background-color: #B78058;
+           align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  }
+
+  .marquee-content{
+      flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  animation: marqueeScroll 20s linear infinite;
+  white-space: nowrap;
+  padding-left: 100%;
+  }
+   .marquee-content span{
+    padding-top: 7px;
+  width: 1920px;
+    height: 64px;
+     align-items: center;
+  justify-content: center;
+   display: inline-block;
+  padding-left: 100%; /* 시작 위치를 오른쪽 바깥에서 */
+  animation: marqueeScroll 20s linear infinite;
+  font-size: 50px;
+    line-height: 50px;
+
+    color: #381738;
+  font-family: 'Classy Vogue', serif; 
+  font-weight: normal;
+  
+  }
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+   
