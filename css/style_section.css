@@ -461,7 +461,7 @@ font-weight: normal;
 
 section.pofo_list {
   width: 100%;
- height: 4000px;
+ height: 2800px;
   background-color: #fff;
   /* background: red; */
   display: flex;
@@ -576,12 +576,27 @@ section.pofo_list ul.list>li>a .toge {
 
   position: relative;
 }
+
+section.pofo_list ul.list>li.pf_6>a{
+   width: 100%;
+  height: 480px;
+    padding-left: 46px;
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+ position: relative;
+}
+
+
+
 .pofo_list .list li.pf_11 {
   width: 100%;
   height: 752px;
   display: flex;
   justify-content: center; /* a 태그 중앙으로 */
 }
+
+
 
 .pofo_list .list li.pf_11 a {
   width: 1587px;
@@ -621,6 +636,18 @@ background-image: url(../img/section_portfoliolist/effort.png);
   text-align: center;
 }
  
+
+.pofo_list .list li.pf_6 a .big {
+  width: 1300px;
+  font-size: 140px;
+  line-height: 160px;
+  font-family: 'Against', sans-serif;
+  font-weight: normal;
+  color: #B78058;
+
+
+margin-top: -40px;
+} 
 .pofo_list .list .pf_11:hover a .img{
 
   width: 440px;
@@ -687,6 +714,15 @@ background-size: cover;
 }
 
 
+.toge p{
+  text-align: end;
+}
+
+.pf_6 .toge p{
+  transform: translateX(-100px);
+  margin-top: -12px;
+}
+
 section.pofo_list ul.list .pf_1 a .toge:hover .img {
 
  background-image: url(../img/section_portfoliolist/2_heal.png); 
@@ -727,7 +763,7 @@ section.pofo_list ul.list .pf_5 a .toge:hover .img {
 
 section.pofo_list ul.list .pf_6 a .toge:hover .img {
 
- background-image: url(../img/section_portfoliolist/6_baseball.png); 
+ background-image: url(../img/section_portfoliolist/visual_hover.png); 
   transition: all 0.4s ease;
 
 }
@@ -840,13 +876,14 @@ section.pofo_list ul.list .pf_6 a .toge:hover .img {
 .pf_6 .img {
 
   background-size: 423px 282px;
-  background-image: url(../img/section_portfoliolist/base.png);
+  background-image: url(../img/section_portfoliolist/visualdesign2.png);
   /* 공통 */
-  width: 496px;
-  height: 320px;
+  width: 357px;
+  height: 238px;
   position: absolute;
   right: 0;
   bottom: 0;
+transform: translateY(-10px);
   display: flex;
   background-position: center;
   background-repeat: no-repeat;

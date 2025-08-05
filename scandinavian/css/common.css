@@ -206,7 +206,7 @@ ul.gnb>li>ul li a {
     backdrop-filter: blur(5px);
 }
 
-.custom_cursor.drag {
+/* .custom_cursor.drag {
     width: 200px;
     height: 200px;
 }
@@ -214,7 +214,7 @@ ul.gnb>li>ul li a {
 .custom_cursor.drag::before {
     content: 'View more';
     background-color: rgba(249, 234, 212, 0.3);
-}
+} */
 
 main section.main_visual {
     position: relative;
@@ -972,7 +972,7 @@ z-index: 0;}
     border-radius: 8px;
     font-weight: 500;
     background: #eee;
-    font-size: 22px;
+    font-size: 20px;
     color: #ffffff;
     background-color: #ba8c46;
     display: flex;
