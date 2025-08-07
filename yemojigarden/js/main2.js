@@ -134,7 +134,7 @@ function initSlides() {
 // ✅ ScrollTrigger 설정
 ScrollTrigger.create({
   trigger: ".e_container",
-  start: "top+=340 center", // .e_container의 top에서 100px 아래 지점이 center에 도달할 때
+  start: "top+=400 center", // e_container의 top에서 340px 아래가 center에 도달할 때
   end: "bottom top",
 
   onEnter: (self) => {
@@ -153,7 +153,7 @@ ScrollTrigger.create({
 
   onLeaveBack: () => {
     hasStarted = false;
-    lastEnteredFromTop = false; // 아래에서 올라오는 건 다시 true 되지 않음
+    lastEnteredFromTop = false;
     enableScroll();
   }
 });
@@ -165,17 +165,29 @@ eventSection.addEventListener("wheel", (e) => {
   e.preventDefault(); // 기본 스크롤 막기
   disableScroll();    // 전체 고정
 
+  // 첫 휠은 무시
   if (!hasFirstScrollSkipped) {
     hasFirstScrollSkipped = true;
     enableScroll();
     return;
   }
 
+  // ✅ 슬라이드 전환이 끝난 이후: .con_3을 그대로 보여주고 아래 섹션으로 스크롤
   if (index >= groupList.length) {
     enableScroll();
+
+    setTimeout(() => {
+      const eventBottom = eventSection.getBoundingClientRect().bottom + window.scrollY;
+      window.scrollTo({
+        top: eventBottom + 1,
+        behavior: "smooth"
+      });
+    }, 50);
+
     return;
   }
 
+  // ✅ 일반 슬라이드 전환
   isAnimating = true;
 
   gsap.to(groupList[index - 1], {
@@ -197,6 +209,15 @@ eventSection.addEventListener("wheel", (e) => {
     }
   });
 }, { passive: false });
+
+
+
+
+
+
+
+
+
 
 
 

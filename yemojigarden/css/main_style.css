@@ -755,7 +755,7 @@ section.news .con>li>ul {
 section.news .con li.no1>ul .img1 {
     width: 476px;
     height: 224px;
-    background-image: url(../img/news/news_1.png);
+    background-image: url(../img/news/news_11.png);
     background-size: cover;
     background-position: center;
     display: block;
@@ -844,7 +844,7 @@ section.news .con li>ul>li.no_btn:hover>a>p {
 section.news .con li.no2>ul .img1 {
     width: 476px;
     height: 224px;
-    background-image: url(../img/news/news_2.png);
+    background-image: url(../img/news/news_22.png);
     background-size: cover;
     background-position: center;
     display: block;
@@ -924,7 +924,7 @@ section.news .con li.no2>ul .btn:hover>a>p {
 section.news .con li.no3>ul .img1 {
     width: 476px;
     height: 224px;
-    background-image: url(../img/news/news_3.png);
+    background-image: url(../img/news/news_33.png);
     background-size: cover;
     background-position: center;
     display: block;
@@ -2167,7 +2167,7 @@ justify-content: space-between;}
     line-height: 70px;
     width: 673px;
     height: 150px;
-    font-family: 'Pretendard Variable';
+ font-family: 'Cafe24Classic', sans-serif;
 
     
 

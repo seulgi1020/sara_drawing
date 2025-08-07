@@ -172,7 +172,25 @@ $(window).on('scroll', function () {
 
 
 
+/* 커서따라다니기 */
+ const cursor = document.querySelector('.custom-cursor');
+  const hoverArea = document.querySelector('.pofo_list');
 
+  // 마우스 움직일 때 위치 갱신
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  // 해당 영역에 들어오면 보여주기
+  hoverArea.addEventListener('mouseenter', () => {
+    cursor.style.opacity = 1;
+  });
+
+  // 해당 영역을 벗어나면 숨기기
+  hoverArea.addEventListener('mouseleave', () => {
+    cursor.style.opacity = 0;
+  });
 
 
 

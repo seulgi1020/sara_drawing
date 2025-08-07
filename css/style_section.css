@@ -471,11 +471,32 @@ section.pofo_list {
   justify-content: center;
  position: relative;
  
- cursor: url('../img/section_portfoliolist/cursor_point.png'), auto;
+
   z-index: 1;
 
 }
 
+
+
+.pofo_list .custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%); 
+  width: 115px;
+  height: 155px;
+  background-image: url('../img/section_portfoliolist/cursor_point.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.pofo_list {
+  cursor: none;
+}
 
 section.pofo_list ul.list {
   width: 1600px;
@@ -497,6 +518,7 @@ section.pofo_list ul.list>li {
   box-sizing: border-box;
   flex: 0 0 auto;
   position: relative;
+
 }
 
 section.pofo_list ul.list>li>a{

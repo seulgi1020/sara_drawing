@@ -66,3 +66,11 @@
   }
 
   /* font-family: 'RiaSans', sans-serif; */
+
+  @font-face {
+  font-family: 'Cafe24Classic';
+  src: url('./fonts/Cafe24Classictype-v1.1\ 2.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/*   font-family: 'Cafe24Classic', sans-serif; */
