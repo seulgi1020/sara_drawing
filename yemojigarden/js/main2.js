@@ -101,24 +101,22 @@ const groupList = [
 
 const eventSection = document.querySelector('.event');
 
-let index = 1;
-let isAnimating = false;
-let hasStarted = false;
-let hasFirstScrollSkipped = false;
-let lastEnteredFromTop = false;
+let index = 1;                 // 현재 보여줄 다음 슬라이드 인덱스 (con_2부터 시작)
+let isAnimating = false;       // 슬라이드 전환 중 여부
+let hasStarted = false;        // 섹션 안에 들어왔는지
+let lastEnteredFromTop = false;// 위에서 들어왔는지 방향 체크
 
-// ✅ 스크롤 잠금 / 해제
+// 스크롤 잠금 / 해제
 function disableScroll() {
   document.body.style.overflow = 'hidden';
   document.documentElement.style.overflow = 'hidden';
 }
-
 function enableScroll() {
   document.body.style.overflow = '';
   document.documentElement.style.overflow = '';
 }
 
-// ✅ 초기화 함수
+// 초기화: con_1 보이게, con_2/3 아래에 대기
 function initSlides() {
   groupList.forEach((el, i) => {
     gsap.set(el, {
@@ -128,13 +126,12 @@ function initSlides() {
   });
   index = 1;
   isAnimating = false;
-  hasFirstScrollSkipped = false;
 }
 
-// ✅ ScrollTrigger 설정
+// ScrollTrigger 설정
 ScrollTrigger.create({
   trigger: ".e_container",
-  start: "top+=400 center", // e_container의 top에서 340px 아래가 center에 도달할 때
+  start: "top+=320 center", // e_container의 top에서 320px 아래가 viewport center에 도달할 때 시작
   end: "bottom top",
 
   onEnter: (self) => {
@@ -142,74 +139,71 @@ ScrollTrigger.create({
       hasStarted = true;
       lastEnteredFromTop = true;
       initSlides();
-      disableScroll();
+      disableScroll(); // 섹션 진입과 동시에 페이지 스크롤 잠금
     }
   },
 
   onLeave: () => {
+    // 섹션 아래로 완전히 나간 경우
     hasStarted = false;
-    enableScroll();
+    enableScroll();   // 안전 해제
   },
 
   onLeaveBack: () => {
+    // 섹션 위로 벗어난 경우
     hasStarted = false;
     lastEnteredFromTop = false;
-    enableScroll();
+    enableScroll();   // 안전 해제
   }
 });
 
-// ✅ wheel 이벤트 처리
-eventSection.addEventListener("wheel", (e) => {
-  if (!hasStarted || !lastEnteredFromTop || isAnimating || e.deltaY <= 0) return;
+// wheel 이벤트: 아래로만 처리(위로 스크롤은 무시)
+if (eventSection) {
+  eventSection.addEventListener("wheel", (e) => {
+    if (!hasStarted || !lastEnteredFromTop || isAnimating || e.deltaY <= 0) return;
 
-  e.preventDefault(); // 기본 스크롤 막기
-  disableScroll();    // 전체 고정
+    // .event 영역 안에서는 계속 잠금 유지
+    e.preventDefault();
+    disableScroll();
 
-  // 첫 휠은 무시
-  if (!hasFirstScrollSkipped) {
-    hasFirstScrollSkipped = true;
-    enableScroll();
-    return;
-  }
-
-  // ✅ 슬라이드 전환이 끝난 이후: .con_3을 그대로 보여주고 아래 섹션으로 스크롤
-  if (index >= groupList.length) {
-    enableScroll();
-
-    setTimeout(() => {
-      const eventBottom = eventSection.getBoundingClientRect().bottom + window.scrollY;
-      window.scrollTo({
-        top: eventBottom + 1,
-        behavior: "smooth"
-      });
-    }, 50);
-
-    return;
-  }
-
-  // ✅ 일반 슬라이드 전환
-  isAnimating = true;
-
-  gsap.to(groupList[index - 1], {
-    y: "100%",
-    opacity: 0,
-    duration: 0.5,
-    ease: "power2.in"
-  });
-
-  gsap.to(groupList[index], {
-    y: "0%",
-    opacity: 1,
-    duration: 0.6,
-    ease: "power2.out",
-    onComplete: () => {
-      index++;
-      isAnimating = false;
+    // 모든 슬라이드를 다 본 뒤(= con_3까지 표시 완료) 다음 휠에서 영역을 벗어남
+    if (index >= groupList.length) {
       enableScroll();
-    }
-  });
-}, { passive: false });
 
+      // .event의 바로 아래로 스무스 스크롤
+      setTimeout(() => {
+        const eventBottom = eventSection.getBoundingClientRect().bottom + window.scrollY;
+        window.scrollTo({
+          top: eventBottom + 1,
+          behavior: "smooth"
+        });
+      }, 50);
+      return;
+    }
+
+    // 일반 슬라이드 전환(con_n -> con_{n+1})
+    isAnimating = true;
+
+    gsap.to(groupList[index - 1], {
+      y: "100%",
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.in"
+    });
+
+    gsap.to(groupList[index], {
+      y: "0%",
+      opacity: 1,
+      duration: 0.6,
+      ease: "power2.out",
+      onComplete: () => {
+        index++;
+        isAnimating = false;
+        // 여기서 enableScroll() 하지 않음 → 영역 이탈 전까지 잠금 유지
+      }
+    });
+  }, { passive: false });
+}
 
 
 
