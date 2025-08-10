@@ -501,7 +501,7 @@ justify-content: space-between;
 
 
 .historyall .gp2 .sg4{
-       width: 250px;
+       width: 350px;
     height: 138px;
   position: relative;
     transform: translateY(-20px);  
@@ -530,7 +530,7 @@ justify-content: space-between;
 .historyall .gp2 .sg4 p{
 
          bottom: 10px;
-    right:185px;
+    right:190px;
     
 }
 
@@ -656,7 +656,7 @@ justify-content: space-between;
 }
 
 .historyall .gp4 .sg7 p{
-    right: 38px;
+    right: 0px;
     bottom: 32px;
 }
 
@@ -730,8 +730,8 @@ justify-content: space-between;
 }
 
 .historyall .gp5 .sg9 p{
-    bottom:30px;
-    left:310px;
+    bottom:26px;
+    left:260px;
 }
 
 
@@ -760,7 +760,7 @@ justify-content: space-between;
 }
 
 .historyall .gp5 .sg10 p{
-    left: 24px;
+    left: -10px;
     bottom: 16px;
     text-align: right;
 }
@@ -832,8 +832,8 @@ position: relative;
 }
 
 .historyall .gp6 .sg12 p{
-    bottom: -30px;
-    right: 120px;
+    bottom: -50px;
+    right: 110px;
 }
 
 
@@ -908,7 +908,7 @@ bottom: 80px;
 }
 
 .historyall .gp7 .sg14 p{
-left: 85px;
+left: 100px;
  bottom: 30px;   
 }
 
@@ -978,8 +978,8 @@ top: 0px;
 }
 
 .historyall .gp8 .sg16 p{
-    left:-5px ;
-    top: 30px;
+    left:-30px ;
+    top: -50px;
 }
 
 .historyall .gp9{
@@ -1058,7 +1058,7 @@ top: 0px;
 }
 .historyall .gp10 .sg18 p{
     bottom: -5px;
-    right:216px;
+    right:120px;
 }
 
 
@@ -1096,8 +1096,8 @@ bottom: 150px;
 }
 
 .historyall .gp11 .sg19 p{
-    text-align: right;
-    left: 0px;
+    text-align: center;
+    left: 50px;
 bottom: 140px;
 
 }
@@ -1128,8 +1128,8 @@ top: 0px;
 }
 
 .historyall .gp11 .sg20 p{
-    bottom: 0px;
-    right: 121px;
+    bottom: -20px;
+    right: 110px;
 }
 
 
@@ -1168,8 +1168,8 @@ top: 0px;
 }
 
 .historyall .gp12 .sg21 p{
-     bottom: -5px;
-    right: 165px;
+     bottom: -25px;
+    right: 125px;
 }
 
 
@@ -1202,7 +1202,7 @@ top: 0px;
 
 .historyall .gp12 .sg22 p{
        bottom: -5px;
-    right: 285px;
+    right: 255px;
 }
 
 
