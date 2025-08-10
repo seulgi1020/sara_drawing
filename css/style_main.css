@@ -369,19 +369,19 @@ margin-top: 70px;
 }
 @keyframes goldAndGlow {
   0% {
-    color: #966846; /* 기본 금색 */
+    color: #a16f4b; /* 기본 금색 */
     text-shadow: none;
-    filter: brightness(1);
+    filter: brightness(1.1);
   }
 
   100% {
-    color: #e4a62a; /* 더 밝은 금색 */
+    color: #f4b73e; /* 더 밝은 금색 */
     text-shadow:
       0 0 2px #902ce2,
       0 0 4px #a22de1,
-      0 0 4px rgba(231, 151, 32, 0.7), /* 살짝 따뜻한 빛 */
+      0 0 4px rgba(237, 166, 58, 0.7), /* 살짝 따뜻한 빛 */
       0 0 8px rgba(171, 152, 152, 0.6); /* 부드럽고 선명한 glow */
-    filter: brightness(0.8);
+    filter: brightness(1.1);
   }
 }
 .main_visual .main_content .main_mid > a .profile .p4:hover {
@@ -389,9 +389,9 @@ margin-top: 70px;
   color: #cd8129; /* 호버 시 진한 금색 */
   text-shadow:
     0 0 2px #da9249,
-    0 0 5px rgba(255, 218, 130, 0.7),
-    0 0 8px rgba(255, 255, 255, 0.6); /* 살짝 빛남 */
-  filter: brightness(1);
+    0 0 5px rgba(255, 218, 130, 0.5),
+    0 0 8px rgba(255, 255, 255, 0.4); /* 살짝 빛남 */
+  filter: brightness(1.0);
 }
 .main_visual .main_content .main_mid > a .profile .next {
   background-image: url(../img/profile_main/next_profile2.svg);
