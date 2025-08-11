@@ -246,11 +246,11 @@ a.more .plus::after{
 }
 .best_product .right_box ul li:hover a span{
     transform: translateY(150px);
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 600;
-    line-height: 2.2;
-        font-family: 'Cafe24Simplehae', sans-serif;
-        color: #fff;
+    line-height: 2.1;
+       font-family: 'Cafe24Simplehae', sans-serif;
+    color: #fff;
 }
 .best_product .right_box ul li a em{
       transform: translateY(150px);
@@ -621,7 +621,7 @@ height: 277px;
     font-size: 80px;
    line-height: 80px;
     font-weight: normal;
-       font-family: 'Classy Vogue', serif; 
+        font-family: 'Classy Vogue', serif; 
          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 .our_business .list ul li a p{
