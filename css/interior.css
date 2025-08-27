@@ -217,6 +217,8 @@ background-image: url(../img/interiordesign/lightfromwall_lighting.png);
        animation: fadeIn 2.0s ease-in forwards, 
         blink 3s ease-in-out infinite;
 }
+
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
