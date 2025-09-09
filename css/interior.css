@@ -32,7 +32,7 @@ justify-items: center;
 .h_warp{
 
 align-self: center;
-  margin-top: 30px;
+  margin-top: 50px;
   z-index: 10;
   width: 1608px;
   height: 900px;
@@ -90,7 +90,7 @@ bottom: 80px;
   left: 255px;
 background-image: url(../img/interiordesign/big_light.png);
   background-repeat: no-repeat;
-  background-size: 396px 483px;
+  background-size: auto;
   background-position: center;
   z-index: 3;
 }
@@ -139,9 +139,40 @@ top: 213px;
   left: 520px;
 background-image: url(../img/interiordesign/art_work.png);
   background-repeat: no-repeat;
-  background-size: 329px 226px;
+  background-size: auto;
   background-position: center;
   z-index: 1;
+  animation: fadeIn 2.0s ease-in forwards, 
+   changeArt 5.4s infinite steps(1);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* 살짝 아래서 올라오는 효과 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes changeArt {
+  0% {
+    background-image: url(../img/interiordesign/art_work.png);
+  }
+  33% {
+    background-image: url(../img/interiordesign/art_work_2.png);
+  }
+  66% {
+    background-image: url(../img/interiordesign/art_work_3.png);
+  }
+  100% {
+    background-image: url(../img/interiordesign/art_work.png);
+  }
 }
 
 
@@ -153,9 +184,28 @@ bottom: 79px;
   left: 399px;
 background-image: url(../img/interiordesign/long_sofa.png);
   background-repeat: no-repeat;
-  background-size: 691px 284px;
+  background-size: auto;
   background-position: center;
   z-index: 6;
+
+  animation: fadeIn 2.0s ease-in forwards, 
+  changeSofa 5.4s infinite steps(1); /* 9초 동안 순환, steps(1) → 뚝뚝 바뀌게 */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* 살짝 아래서 올라오는 효과 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes changeSofa {
+  0%   { background-image: url(../img/interiordesign/long_sofa.png); }
+  33%  { background-image: url(../img/interiordesign/long_sofa_2.png); }
+  66%  { background-image: url(../img/interiordesign/long_sofa_3.png); }
+  100% { background-image: url(../img/interiordesign/long_sofa.png); }
 }
 
 .h_warp .minitable{
@@ -166,11 +216,29 @@ bottom: 12px;
   left: 471px;
 background-image: url(../img/interiordesign/mini_table.png);
   background-repeat: no-repeat;
-  background-size: 180px 232px;
+  background-size: auto;
   background-position: center;
   z-index: 7;
+  align-self: flex-end;
+  animation: fadeIn 2.0s ease-in forwards, 
+  changeMiniTable 5.4s infinite steps(1); 
 }
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* 살짝 아래서 올라오는 효과 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes changeMiniTable {
+  0%   { background-image: url(../img/interiordesign/mini_table.png); }
+  33%  { background-image: url(../img/interiordesign/mini_table_2.png); }
+  66%  { background-image: url(../img/interiordesign/mini_table_3.png); }
+  100% { background-image: url(../img/interiordesign/mini_table.png); }
+}
 
 
 
@@ -266,6 +334,29 @@ background-image: url(../img/interiordesign/redchair.png);
   background-size: 281px 326px;
   background-position: center;
   z-index: 5;
+  animation: changeRedSofa 5.4s infinite steps(1); /* 뚝뚝 바뀌게 */
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* 살짝 아래서 올라오는 효과 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes changeRedSofa {
+  0%   { background-image: url(../img/interiordesign/redchair.png); }
+  33%  { background-image: url(../img/interiordesign/greenchair.png); }
+  66%  { background-image: url(../img/interiordesign/sprit_chair.png); }
+  100% { background-image: url(../img/interiordesign/redchair.png); }
 }
 
 
@@ -314,10 +405,7 @@ background-image: url(../img/interiordesign/main_top_mark.png);
 .strip,
 .light_hang,
 .light_big,
-.art_work,
-.sofa,
-.minitable,
-.red_sofa,
+
 .left_text
 {
   opacity: 0; /* 초기 숨김 */
@@ -344,7 +432,11 @@ background-image: url(../img/interiordesign/main_top_mark.png);
 
 
 
-
+.pr{
+  width: 1920px;
+  height: 54px;
+  background-image: url(../img/interiordesign/prgrphline.png);
+}
 
 
 
