@@ -1254,13 +1254,14 @@ justify-content: space-between;}
   height: 141px;
   background-repeat: no-repeat;
   background-position: center;
-
-
+    background-size: 141px 141px;
 }
 
 
 .program .im_1{
   background-image: url(../img/profile_other/programs/figma.png);
+    background-size: 141px 141px;
+    background-size: contain;
 }
 
 .program .im_2{
