@@ -200,38 +200,6 @@ gsap.timeline({
     }
   });
   
-  // 초기 상태 설정
-  gsap.set(".vid_box", {
-    scale: 0.5,
-    borderRadius: "50%",
-    transformOrigin: "center center"
-  });
-  gsap.set(".vid", { opacity: 0 });
-  
-  // vid_box 스크롤 인터랙션 타임라인
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".vid_box",
-      start: "top 50%",
-      end: "top 50%+=1500",
-      scrub: 1,
-      pin: ".vid_box",
-      pinSpacing: true,
-      pinReparent: true
-    }
-  })
-  .to(".vid_box", {
-    scale: 1,
-    borderRadius: "0%",
-    ease: "power1.inOut"
-  })
-  .to(".vid_box iframe, .vid_box video", {
-    scale: 1,
-    opacity: 1,
-    transformOrigin: "center center",
-    ease: "power2.out",
-    duration: 2
-  }, "<"); // 동시에 실행
 
 
 
@@ -332,4 +300,3 @@ function applySimolyScroll(selector, speed = 4, direction = 'forwards') {
         pauseOnTouch: true,
     })
 }
-applySimolyScroll('.footer .list2'); 
