@@ -115,7 +115,7 @@ if (businessSection && cursor) {
 let tl = gsap.timeline({
     scrollTrigger: {
         trigger: '.txt_area',
-        start: 'top 20%',
+        start: 'top 30%',
         end: 'bottom bottom',
         scrub: true,
     }
@@ -147,8 +147,8 @@ brandCards.forEach((card, i) => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: '.brand',
-            start: `top+=${i * 250} center`,
-            end: `top+=${(i + 1) * 250} center`,
+            start: `top+=${i * 200} center`,
+            end: `top+=${(i + 1) * 0} center`,
             scrub: 1.2,
         }
     });
@@ -185,20 +185,7 @@ let businessSwiper = new Swiper('.business .slide', {
 /* vid에 토글 클래스 적용 */
 // .vid에 on 클래스 토글 + opacity 보장
 // .vid에 스크롤 진입 시 .on 클래스 토글 + opacity 전환
-gsap.timeline({
-    scrollTrigger: {
-      trigger: '.vid',
-      start: 'top 13%',
-      end: 'bottom center',
-      scrub: true,
-      toggleClass: {
-        targets: '.vid',
-        className: 'on'
-      },
-      onEnter: () => gsap.to(".vid", { opacity: 1, duration: 0.5 }),
-      onLeaveBack: () => gsap.to(".vid", { opacity: 0, duration: 0.5 })
-    }
-  });
+
   
 
 
